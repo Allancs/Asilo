@@ -247,37 +247,67 @@ object Emails: TEmails
     object Label9: TLabel
       Left = 8
       Top = 131
-      Width = 57
-      Height = 13
+      Width = 54
+      Height = 15
       Caption = 'Menssagem'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label6: TLabel
       Left = 8
       Top = 90
-      Width = 28
-      Height = 13
+      Width = 27
+      Height = 15
       Caption = 'Nome'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label5: TLabel
       Left = 136
       Top = 90
-      Width = 93
-      Height = 13
+      Width = 90
+      Height = 15
       Caption = 'Destinatario ( Para )'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label2: TLabel
       Left = 8
       Top = 47
       Width = 38
-      Height = 13
+      Height = 15
       Caption = 'Assunto'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 81
-      Height = 13
+      Width = 75
+      Height = 15
       Caption = 'Remetente ( De )'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object SpeedButton1: TSpeedButton
       Left = 368
@@ -350,15 +380,27 @@ object Emails: TEmails
       Top = 152
       Width = 369
       Height = 101
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       Lines.Strings = (
         'Menssagem')
+      ParentFont = False
       TabOrder = 4
     end
     object Para: TEdit
       Left = 136
       Top = 105
       Width = 225
-      Height = 21
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 3
       Text = 'allancolombo@hotmail.com'
     end
@@ -366,7 +408,13 @@ object Emails: TEmails
       Left = 8
       Top = 105
       Width = 121
-      Height = 21
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 2
       Text = 'Nome'
     end
@@ -374,7 +422,13 @@ object Emails: TEmails
       Left = 8
       Top = 65
       Width = 353
-      Height = 21
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
       Text = 'Assunto'
     end
@@ -382,7 +436,13 @@ object Emails: TEmails
       Left = 8
       Top = 24
       Width = 353
-      Height = 21
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object BitBtn2: TBitBtn
@@ -393,7 +453,13 @@ object Emails: TEmails
       BiDiMode = bdLeftToRight
       Caption = '&Enviar'
       Default = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentBiDiMode = False
+      ParentFont = False
       TabOrder = 5
       OnClick = BitBtn2Click
       Glyph.Data = {
@@ -466,73 +532,121 @@ object Emails: TEmails
     object Label11: TLabel
       Left = 8
       Top = 5
-      Width = 30
-      Height = 13
+      Width = 25
+      Height = 15
       Caption = 'SMTP'
       FocusControl = SMTP
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label12: TLabel
       Left = 112
       Top = 5
       Width = 19
-      Height = 13
+      Height = 15
       Caption = 'Port'
       FocusControl = Porta
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label13: TLabel
       Left = 160
       Top = 5
       Width = 36
-      Height = 13
+      Height = 15
       Caption = 'Usuario'
       FocusControl = Usuario
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label14: TLabel
       Left = 320
       Top = 5
-      Width = 31
-      Height = 13
+      Width = 28
+      Height = 15
       Caption = 'Senha'
       FocusControl = Senha
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object SMTP: TDBEdit
       Left = 8
       Top = 21
       Width = 97
-      Height = 21
+      Height = 23
       DataField = 'SMTP'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object Porta: TDBEdit
       Left = 112
       Top = 21
       Width = 43
-      Height = 21
+      Height = 23
       DataField = 'PORT'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
     end
     object Usuario: TDBEdit
       Left = 160
       Top = 21
       Width = 153
-      Height = 21
+      Height = 23
       DataField = 'EMAIL'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 2
     end
     object Senha: TDBEdit
       Left = 320
       Top = 21
       Width = 97
-      Height = 21
+      Height = 23
       DataField = 'SENHA'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       PasswordChar = '*'
       TabOrder = 3
     end
@@ -543,7 +657,13 @@ object Emails: TEmails
       Height = 33
       BiDiMode = bdLeftToRight
       Caption = '&Oculta Senha'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentBiDiMode = False
+      ParentFont = False
       TabOrder = 4
       Visible = False
       OnClick = OcutarClick
@@ -612,7 +732,13 @@ object Emails: TEmails
       Height = 33
       BiDiMode = bdLeftToRight
       Caption = '&Mostra Senha'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentBiDiMode = False
+      ParentFont = False
       TabOrder = 5
       OnClick = MostrarClick
       Glyph.Data = {
@@ -680,7 +806,13 @@ object Emails: TEmails
       Height = 33
       BiDiMode = bdLeftToRight
       Caption = '&Anterior'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentBiDiMode = False
+      ParentFont = False
       TabOrder = 6
       OnClick = BitBtn4Click
       Glyph.Data = {
@@ -748,7 +880,13 @@ object Emails: TEmails
       Height = 33
       BiDiMode = bdLeftToRight
       Caption = '&Proximo'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentBiDiMode = False
+      ParentFont = False
       TabOrder = 7
       OnClick = BitBtn3Click
       Glyph.Data = {
@@ -819,40 +957,40 @@ object Emails: TEmails
     object Label10: TLabel
       Left = 8
       Top = 73
-      Width = 126
+      Width = 95
       Height = 16
       Caption = 'Email da Consulta'
       FocusControl = getEmail
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label3: TLabel
       Left = 8
       Top = 17
-      Width = 111
+      Width = 81
       Height = 16
       Caption = 'Pesquisa Nome'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object EmailReal: TLabel
       Left = 8
       Top = 104
-      Width = 63
+      Width = 47
       Height = 16
       Caption = 'EmailReal'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
     end
@@ -878,10 +1016,10 @@ object Emails: TEmails
       Width = 169
       Height = 24
       CharCase = ecUpperCase
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -895,10 +1033,10 @@ object Emails: TEmails
       BiDiMode = bdRightToLeftNoAlign
       Caption = 'Parceiros'
       Checked = True
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentBiDiMode = False
       ParentFont = False
@@ -911,10 +1049,10 @@ object Emails: TEmails
       Width = 90
       Height = 17
       Caption = 'Voluntarios'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
       TabOrder = 3
@@ -926,11 +1064,11 @@ object Emails: TEmails
       Height = 33
       Caption = '&Inserir Email'
       Default = True
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
       OnClick = BitBtn1Click
@@ -999,11 +1137,11 @@ object Emails: TEmails
       Height = 33
       BiDiMode = bdLeftToRight
       Caption = '&Anterior'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
+      Font.Height = -13
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentBiDiMode = False
       ParentFont = False
       TabOrder = 5
@@ -1073,11 +1211,11 @@ object Emails: TEmails
       Height = 33
       BiDiMode = bdLeftToRight
       Caption = '&Proximo'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
+      Font.Height = -13
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
       ParentBiDiMode = False
       ParentFont = False
       TabOrder = 6

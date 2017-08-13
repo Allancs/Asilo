@@ -10,29 +10,32 @@ uses
 type
   TCadastroContas = class(TForm)
     Image1: TImage;
-    btnEditar: TBitBtn;
-    btnInserir: TBitBtn;
-    Direita: TSpeedButton;
-    Esquerda: TSpeedButton;
-    btnGravar: TBitBtn;
-    btnDeletar: TBitBtn;
-    btnCancelar: TBitBtn;
     sqlAux: TSQLQuery;
-    Label1: TLabel;
-    DBEdit1: TDBEdit;
-    Label2: TLabel;
-    DBEdit2: TDBEdit;
-    Label3: TLabel;
-    DBEdit3: TDBEdit;
-    Label4: TLabel;
-    DBEdit4: TDBEdit;
-    Label5: TLabel;
-    DBEdit5: TDBEdit;
-    Admin: TRadioButton;
-    Padrao: TRadioButton;
-    User: TRadioButton;
     Veryfi: TTimer;
-    Tipo: TLabel;
+    Baixo: TPanel;
+    btnCancelar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnDeletar: TBitBtn;
+    btnGravar: TBitBtn;
+    btnInserir: TBitBtn;
+    Esquerda: TBitBtn;
+    Direita: TBitBtn;
+    LadoEsquerdo: TPanel;
+    Label5: TLabel;
+    Label4: TLabel;
+    Label3: TLabel;
+    Label2: TLabel;
+    Label1: TLabel;
+    DBEdit5: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit1: TDBEdit;
+    User: TRadioButton;
+    Padrao: TRadioButton;
+    Admin: TRadioButton;
+    Label7: TLabel;
+    OQue: TMemo;
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -132,6 +135,16 @@ end;
 
 procedure TCadastroContas.btnDeletarClick(Sender: TObject);
 begin
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco !',
+                       mtWarning,
+                       [mbCancel],
+                       0)
+end
+else
+begin
           DBEdit2.Enabled       := False;
           DBEdit3.Enabled      := False;
           DBEdit4.Enabled       := False;
@@ -151,6 +164,7 @@ begin
                   Else Begin
                           ShowMessage ('Nenhum registro deletado!');
                        End;
+                       end;
 end;
 
 procedure TCadastroContas.btnGravarClick(Sender: TObject);
@@ -201,19 +215,20 @@ begin
     if Admin.Checked = True
      then
      begin
-          DBEdit3.Text := 'admin';
+          Admin.Checked := True;
       end
       Else if Padrao.Checked = True
        then
        Begin
-        DBEdit3.Text := 'padrao';
+        Padrao.Checked := True;
       End
       else if User.Checked = True
       then
       begin
-      DBEdit3.Text := 'user';
+      User.Checked := true;
       end;
-      Tipo.Caption := 'Tipo de Conta, '+DBEdit3.Text;
+
+
 end;
 
 end.

@@ -10,12 +10,8 @@ type
   TLogin = class(TForm)
     Image3: TImage;
     Image2: TImage;
-    Image1: TImage;
     edtUsuario: TEdit;
     edtSenha: TEdit;
-    Image6: TImage;
-    Image7: TImage;
-    Image8: TImage;
     BitBtn1: TBitBtn;
     procedure Image1Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
@@ -33,7 +29,8 @@ type
 
 var
   Login: TLogin;
-  User : string;
+  User, Nome : string;
+
 implementation
 
 uses UModulo, UPrincipal;
@@ -95,6 +92,7 @@ begin
            Principal.UNome.Caption  := 'Usuário , ' + Modulo.sqlDSLogin.Fields[1].AsString;
            Principal.Tipo.Caption := 'Permissão : '+Modulo.sqlDSLogin.Fields[2].AsString;
            User := Modulo.sqlDSLogin.Fields[2].AsString;
+           Principal.Caption := 'ASILO RECANTO DAS FLORES - Usuário : '+Modulo.sqlDSLogin.Fields[1].AsString;
 
 end;
 

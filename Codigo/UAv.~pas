@@ -242,6 +242,7 @@ begin
           Menssagem := Msggs +' '+GSS + ' '+GNN + ' '+PNN+#13+Msgcss +' '+CSS +' '+CNN +' '+PNC+#13+ 'O que melhoraria o sistema ?'+ ' '+OQMS.Text+#13+ Msgcs + ' ' +N11+N22+N33+N44+N55+#13+'Finalizado com Sucesso!';
 
 
+
 end;
 
 end.

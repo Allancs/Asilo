@@ -1,6 +1,6 @@
 object Funcionario: TFuncionario
-  Left = 142
-  Top = 201
+  Left = 202
+  Top = 190
   Width = 800
   Height = 500
   Caption = 'Funcionario'

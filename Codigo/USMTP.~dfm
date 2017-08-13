@@ -1,10 +1,10 @@
 object SMTPs: TSMTPs
-  Left = 189
-  Top = 145
+  Left = 235
+  Top = 150
   Width = 800
   Height = 500
   BorderIcons = [biSystemMenu]
-  Caption = 'Cadastro de Servidor SMTP '
+  Caption = 'Cadastro de servidor Smtp '
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -244,53 +244,83 @@ object SMTPs: TSMTPs
     object Label5: TLabel
       Left = 8
       Top = 200
-      Width = 31
-      Height = 13
+      Width = 26
+      Height = 15
       Caption = 'Senha'
       FocusControl = DBEdit5
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
     end
     object Label4: TLabel
       Left = 8
       Top = 160
-      Width = 36
-      Height = 13
+      Width = 32
+      Height = 15
       Caption = 'Usuario'
       FocusControl = DBEdit4
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
     end
     object Label3: TLabel
       Left = 8
       Top = 120
-      Width = 19
-      Height = 13
+      Width = 16
+      Height = 15
       Caption = 'Port'
       FocusControl = DBEdit3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
     end
     object Label2: TLabel
       Left = 8
       Top = 80
-      Width = 30
-      Height = 13
+      Width = 26
+      Height = 15
       Caption = 'SMTP'
       FocusControl = DBEdit2
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
     end
     object Label1: TLabel
       Left = 8
       Top = 40
-      Width = 33
-      Height = 13
+      Width = 29
+      Height = 15
       Caption = 'C'#243'digo'
       FocusControl = DBEdit1
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
     end
     object Label6: TLabel
       Left = 8
       Top = 8
-      Width = 259
-      Height = 24
+      Width = 207
+      Height = 23
       Caption = 'Cadastro de Servidor SMTP'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -298,10 +328,16 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 216
       Width = 113
-      Height = 21
+      Height = 23
       DataField = 'SENHA'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       PasswordChar = '*'
       TabOrder = 1
     end
@@ -309,40 +345,64 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 176
       Width = 193
-      Height = 21
+      Height = 23
       DataField = 'EMAIL'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object DBEdit3: TDBEdit
       Left = 8
       Top = 136
       Width = 43
-      Height = 21
+      Height = 23
       DataField = 'PORT'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 2
     end
     object DBEdit2: TDBEdit
       Left = 8
       Top = 96
       Width = 89
-      Height = 21
+      Height = 23
       DataField = 'SMTP'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 3
     end
     object DBEdit1: TDBEdit
       Left = 8
       Top = 56
       Width = 17
-      Height = 21
+      Height = 23
       DataField = 'ID'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 4
     end
   end
@@ -360,10 +420,10 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Editar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
@@ -432,10 +492,10 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Inserir'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
@@ -504,10 +564,10 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Salvar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
@@ -576,10 +636,10 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Deletar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
@@ -648,10 +708,10 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Cancelar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
@@ -720,10 +780,10 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Proximo'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
@@ -792,10 +852,10 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Anterior'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
@@ -868,13 +928,13 @@ object SMTPs: TSMTPs
     object Label7: TLabel
       Left = 8
       Top = 8
-      Width = 199
+      Width = 152
       Height = 16
       Caption = 'Um pouquinho de Sabedoria'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -884,12 +944,18 @@ object SMTPs: TSMTPs
       Width = 249
       Height = 81
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       Lines.Strings = (
         'Simple Mail Transfer Protocol'
         '(abreviado SMTP. Traduzido do ingl'#234's, significa '
         '"Protocolo de transfer'#234'ncia de correio simples")'
         #233' o protocolo padr'#227'o para envio de e-mails '
         'atrav'#233's da Internet.')
+      ParentFont = False
       TabOrder = 0
       Visible = False
     end
@@ -899,6 +965,12 @@ object SMTPs: TSMTPs
       Width = 97
       Height = 25
       Caption = 'O Que '#233' SMTP?'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 1
       OnClick = OqueeClick
     end
@@ -908,6 +980,12 @@ object SMTPs: TSMTPs
       Width = 137
       Height = 25
       Caption = 'Quais SMTP Funciona?'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 2
       OnClick = EmailsClick
     end
@@ -917,12 +995,18 @@ object SMTPs: TSMTPs
       Width = 249
       Height = 81
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       Lines.Strings = (
         'O servi'#231'o de Email funciona apenas para o GMAIL.'
         'SMTP'
         'smtp.gmail.com'
         'Porta'
         '465')
+      ParentFont = False
       TabOrder = 3
       Visible = False
     end
@@ -930,8 +1014,50 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 120
       Width = 249
-      Height = 21
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 4
+      Visible = False
+    end
+    object OBS: TButton
+      Left = 256
+      Top = 160
+      Width = 75
+      Height = 25
+      Caption = 'Observa'#231#227'o'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 5
+      OnClick = OBSClick
+    end
+    object OQue3: TMemo
+      Left = 8
+      Top = 32
+      Width = 249
+      Height = 81
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      Lines.Strings = (
+        'Para o pleno funcionamento libere a op'#231#227'o de '
+        'aplicativos menos seguro do'
+        'seu GMAIL.'
+        'Link abaixo para acessar as configura'#231#245'es.'
+        '')
+      ParentFont = False
+      TabOrder = 6
       Visible = False
     end
   end

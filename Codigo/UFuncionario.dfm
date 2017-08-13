@@ -236,210 +236,354 @@ object Funcionario: TFuncionario
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 33
-    Height = 13
+    Width = 34
+    Height = 15
     Caption = 'C'#243'digo'
     FocusControl = DBEdit1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label2: TLabel
     Left = 56
     Top = 8
-    Width = 28
-    Height = 13
+    Width = 27
+    Height = 15
     Caption = 'Nome'
     FocusControl = DBEdit2
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label3: TLabel
     Left = 16
     Top = 48
-    Width = 24
-    Height = 13
+    Width = 22
+    Height = 15
     Caption = 'Sexo'
     FocusControl = DBEdit3
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label4: TLabel
     Left = 48
     Top = 48
-    Width = 97
-    Height = 13
+    Width = 91
+    Height = 15
     Caption = 'Data de Nascimento'
     FocusControl = DBEdit4
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label5: TLabel
     Left = 192
     Top = 48
-    Width = 27
-    Height = 13
+    Width = 25
+    Height = 15
     Caption = 'Idade'
     FocusControl = DBEdit5
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label6: TLabel
     Left = 16
     Top = 89
-    Width = 36
-    Height = 13
+    Width = 34
+    Height = 15
     Caption = 'Fun'#231#227'o'
     FocusControl = DBEdit6
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label7: TLabel
     Left = 16
     Top = 128
     Width = 32
-    Height = 13
+    Height = 15
     Caption = 'Salario'
     FocusControl = DBEdit7
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label8: TLabel
     Left = 16
     Top = 168
-    Width = 20
-    Height = 13
+    Width = 19
+    Height = 15
     Caption = 'CPF'
     FocusControl = DBEdit8
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label9: TLabel
     Left = 120
     Top = 168
-    Width = 16
-    Height = 13
+    Width = 14
+    Height = 15
     Caption = 'RG'
     FocusControl = DBEdit9
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label10: TLabel
     Left = 216
     Top = 168
-    Width = 96
-    Height = 13
+    Width = 93
+    Height = 15
     Caption = 'Carteira de Trabalho'
     FocusControl = DBEdit10
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label11: TLabel
     Left = 16
     Top = 216
-    Width = 32
-    Height = 13
+    Width = 33
+    Height = 15
     Caption = 'Celular'
     FocusControl = DBEdit11
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object Label12: TLabel
     Left = 208
     Top = 216
-    Width = 42
-    Height = 13
+    Width = 38
+    Height = 15
     Caption = 'Telefone'
     FocusControl = DBEdit12
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object DBEdit1: TDBEdit
     Left = 16
     Top = 24
     Width = 20
-    Height = 21
+    Height = 23
     DataField = 'COD_FUN'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
   end
   object DBEdit2: TDBEdit
     Left = 56
     Top = 24
     Width = 300
-    Height = 21
+    Height = 23
     DataField = 'NOME'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object DBEdit3: TDBEdit
     Left = 16
     Top = 64
     Width = 17
-    Height = 21
+    Height = 23
     DataField = 'SEXO'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object DBEdit4: TDBEdit
     Left = 48
     Top = 64
     Width = 134
-    Height = 21
+    Height = 23
     DataField = 'DATANASCIMENTO'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
   end
   object DBEdit5: TDBEdit
     Left = 192
     Top = 64
     Width = 43
-    Height = 21
+    Height = 23
     DataField = 'IDADE'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
   end
   object DBEdit6: TDBEdit
     Left = 16
     Top = 105
     Width = 337
-    Height = 21
+    Height = 23
     DataField = 'FUNCAO'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 5
   end
   object DBEdit7: TDBEdit
     Left = 16
     Top = 144
     Width = 89
-    Height = 21
+    Height = 23
     DataField = 'SALARIO'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
   end
   object DBEdit8: TDBEdit
     Left = 16
     Top = 184
     Width = 97
-    Height = 21
+    Height = 23
     DataField = 'CPF'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
     MaxLength = 14
+    ParentFont = False
     TabOrder = 7
   end
   object DBEdit9: TDBEdit
     Left = 120
     Top = 184
     Width = 89
-    Height = 21
+    Height = 23
     DataField = 'RG'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
     MaxLength = 9
+    ParentFont = False
     TabOrder = 8
   end
   object DBEdit10: TDBEdit
     Left = 216
     Top = 184
     Width = 137
-    Height = 21
+    Height = 23
     DataField = 'CARTEIRATRABALHO'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
     MaxLength = 15
+    ParentFont = False
     TabOrder = 9
   end
   object DBEdit11: TDBEdit
     Left = 16
     Top = 232
     Width = 186
-    Height = 21
+    Height = 23
     DataField = 'CELULAR'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
     MaxLength = 14
+    ParentFont = False
     TabOrder = 10
   end
   object DBEdit12: TDBEdit
     Left = 208
     Top = 232
     Width = 145
-    Height = 21
+    Height = 23
     DataField = 'TELEFONE'
     DataSource = Modulo.dsFun
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
     MaxLength = 13
+    ParentFont = False
     TabOrder = 11
   end
 end

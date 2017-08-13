@@ -133,6 +133,16 @@ end;
 procedure TIdoso.btnDeletarClick(Sender: TObject);
 
 begin
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+end
+else
+begin
           DBEdit2.Enabled        := False;
           DBEdit3.Enabled        := False;
           DBEdit4.Enabled        := False;
@@ -164,6 +174,7 @@ begin
                   Else Begin
                           ShowMessage ('Nenhum registro deletado!');
                        End;
+                       end;
 
 
 end;

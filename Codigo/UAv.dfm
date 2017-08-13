@@ -144,13 +144,13 @@ object Avaliacao: TAvaliacao
   object Label6: TLabel
     Left = 8
     Top = 2
-    Width = 33
-    Height = 13
+    Width = 32
+    Height = 14
     Caption = 'Nome'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
@@ -165,13 +165,13 @@ object Avaliacao: TAvaliacao
   object Label1: TLabel
     Left = 8
     Top = 48
-    Width = 107
-    Height = 13
+    Width = 105
+    Height = 14
     Caption = 'Gostou do Sistema'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
@@ -179,13 +179,13 @@ object Avaliacao: TAvaliacao
   object LE: TLabel
     Left = 8
     Top = 104
-    Width = 193
-    Height = 13
+    Width = 181
+    Height = 14
     Caption = 'N'#227'o gostou? Porque? Diga a n'#243's.'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
@@ -194,13 +194,13 @@ object Avaliacao: TAvaliacao
   object Label3: TLabel
     Left = 8
     Top = 160
-    Width = 218
-    Height = 13
+    Width = 212
+    Height = 14
     Caption = 'Achou o Sistema completo e intuitivo?'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
@@ -208,13 +208,13 @@ object Avaliacao: TAvaliacao
   object CL: TLabel
     Left = 8
     Top = 208
-    Width = 193
-    Height = 13
+    Width = 181
+    Height = 14
     Caption = 'N'#227'o gostou? Porque? Diga a n'#243's.'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
@@ -222,13 +222,13 @@ object Avaliacao: TAvaliacao
   object Label5: TLabel
     Left = 8
     Top = 264
-    Width = 161
-    Height = 13
+    Width = 160
+    Height = 14
     Caption = 'O que melhoraria o sistema?'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
@@ -236,13 +236,13 @@ object Avaliacao: TAvaliacao
   object Label7: TLabel
     Left = 8
     Top = 320
-    Width = 219
-    Height = 13
+    Width = 203
+    Height = 14
     Caption = 'Qual nota daria ao sistema? De 1 a 5?'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
@@ -253,10 +253,10 @@ object Avaliacao: TAvaliacao
     Width = 195
     Height = 25
     Caption = 'Enviar Avalia'#231#227'o'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
@@ -266,7 +266,13 @@ object Avaliacao: TAvaliacao
     Left = 8
     Top = 17
     Width = 121
-    Height = 21
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     Text = 'Nome'
   end
@@ -276,6 +282,12 @@ object Avaliacao: TAvaliacao
     Width = 49
     Height = 17
     Caption = 'Sim'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object GN: TCheckBox
@@ -284,13 +296,25 @@ object Avaliacao: TAvaliacao
     Width = 49
     Height = 17
     Caption = 'N'#227'o'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
   end
   object EN: TEdit
     Left = 8
     Top = 128
     Width = 185
-    Height = 21
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
     Visible = False
   end
@@ -300,6 +324,12 @@ object Avaliacao: TAvaliacao
     Width = 49
     Height = 17
     Caption = 'Sim'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 5
   end
   object CN: TCheckBox
@@ -308,20 +338,38 @@ object Avaliacao: TAvaliacao
     Width = 49
     Height = 17
     Caption = 'N'#227'o'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
   end
   object CE: TEdit
     Left = 8
     Top = 232
     Width = 185
-    Height = 21
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 7
   end
   object OQMS: TEdit
     Left = 8
     Top = 288
     Width = 185
-    Height = 21
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 8
   end
   object N1: TRadioButton
@@ -330,6 +378,12 @@ object Avaliacao: TAvaliacao
     Width = 33
     Height = 17
     Caption = '1'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 9
   end
   object N2: TRadioButton
@@ -338,6 +392,12 @@ object Avaliacao: TAvaliacao
     Width = 33
     Height = 17
     Caption = '2'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 10
   end
   object N3: TRadioButton
@@ -346,6 +406,12 @@ object Avaliacao: TAvaliacao
     Width = 33
     Height = 17
     Caption = '3'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 11
   end
   object N4: TRadioButton
@@ -354,6 +420,12 @@ object Avaliacao: TAvaliacao
     Width = 33
     Height = 17
     Caption = '4'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 12
   end
   object N5: TRadioButton
@@ -362,6 +434,12 @@ object Avaliacao: TAvaliacao
     Width = 33
     Height = 17
     Caption = '5'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 13
   end
   object IdSMTP1: TIdSMTP

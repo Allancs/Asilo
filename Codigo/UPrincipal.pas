@@ -67,6 +67,21 @@ type
     Image1: TImage;
     sdsAuxOBS: TStringField;
     sdsAuxDATA: TDateField;
+    Tarefas: TCheckBox;
+    Aux: TSimpleDataSet;
+    DataSource2: TDataSource;
+    TarefaPop: TGroupBox;
+    DBText3: TDBText;
+    DBText4: TDBText;
+    Label3: TLabel;
+    Label4: TLabel;
+    TarefaP: TButton;
+    TarefaA: TButton;
+    AuxDATA: TDateField;
+    AuxTAREFA: TStringField;
+    Timer1: TTimer;
+    Label5: TLabel;
+    Label6: TLabel;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -104,6 +119,9 @@ type
     procedure Sair1Click(Sender: TObject);
     procedure AvaliClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure TarefaAClick(Sender: TObject);
+    procedure TarefaPClick(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -149,6 +167,16 @@ begin
       Else
        Begin
       Aviso.Visible := False;
+      End;
+
+       if Tarefas.Checked = true
+     then
+     begin
+           TarefaPop.Visible := True;
+      end
+      Else
+       Begin
+      TarefaPop.Visible := False;
       End;
   end;
 
@@ -279,7 +307,8 @@ end;
 
 procedure TPrincipal.pxClick(Sender: TObject);
 begin
-sdsAux.Prior;
+sdsAux.Next;
+
 //Modulo.cdsAviso.Prior;
 end;
 
@@ -297,11 +326,15 @@ begin
         End;
          If (ULogin.User = 'admin')
              Then Begin
+             Tarefa.btnDeletar.Enabled := true;
+             Tarefa.btnEditar.Enabled := true;
+             Tarefa.btnCancelar.Enabled := true;
                   Cadastro.Visible := true;
                   Conta.Visible := true;
                   Rela.Visible := true;
                   SMTP.Visible := true;
                   email.Visible := true;
+                  tipo.visible := true;
                   CadastroAvisos.btnEditar.visible := true;
                   CadastroAvisos.btnInserir.visible := true;
                   CadastroAvisos.btnCancelar.visible := true;
@@ -324,12 +357,17 @@ begin
                   ser.visible := true;
                   avali.visible := true;
                   CadastroConta.Visible := true;
+                  Tarefa.btnInserir.Enabled := true;
+                  Tarefa.btnGravar.Enabled := true;
+                  
 
 
                     end
                     else If (ULogin.User = 'padrao')
                     then
                     begin
+                    saudes.btnDeletar.visible := false;
+                    Incidentes.btnDeletar.visible := false;
                     pro.visible := true;
                     par.visible := true;
                     con.visible := true;
@@ -363,7 +401,7 @@ end;
 
 procedure TPrincipal.anClick(Sender: TObject);
 begin
-sdsAux.Next;
+sdsAux.Prior;
 //Modulo.cdsAviso.Next;
 end;
 
@@ -383,8 +421,11 @@ Avaliacao.Visible := True;
 end;
 
 procedure TPrincipal.FormActivate(Sender: TObject);
-Var       TxtConsulta, DtaAtual : String;
+Var       TxtConsulta, TxxtConsulta, DtaAtual : String;
 begin
+
+          Label5.Font.Color := clRed;
+          Label6.Font.Color := clGreen;
           // Pega a Data
           DtaAtual := DateToStr(Date);
           // Troca a / por . (Firebird guarda a data com . e nao /)
@@ -401,7 +442,50 @@ begin
           sdsAux.Close;
           sdsAux.DataSet.CommandText := TxtConsulta;
           sdsAux.Open;
+          TxxtConsulta :=
+          'Select DATA, TAREFA From TAREFA WHERE DATA >='
+          + QuotedStr(DtaAtual);
+          Aux.Close;
+          Aux.DataSet.CommandText := TxxtConsulta;
+          Aux.Open;
+          
+end;
 
+procedure TPrincipal.TarefaAClick(Sender: TObject);
+begin
+Aux.Prior;
+end;
+
+procedure TPrincipal.TarefaPClick(Sender: TObject);
+begin
+Aux.Next;
+
+end;
+
+procedure TPrincipal.Timer1Timer(Sender: TObject);
+var
+DtaAtual : string;
+begin
+        DtaAtual := DateToStr(Date);
+If (DBText3.Caption = DtaAtual)
+          then
+          Begin
+          DBText3.Font.Color := clRed;
+          End
+          else
+          begin
+          DBText3.Font.Color := clGreen;
+          end;
+
+          If (DBText2.Caption = DtaAtual)
+          then
+          Begin
+          DBText2.Font.Color := clRed;
+          End
+          else
+          begin
+          DBText2.Font.Color := clGreen;
+          end;
 end;
 
 end.

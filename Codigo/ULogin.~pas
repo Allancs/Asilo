@@ -10,20 +10,15 @@ type
   TLogin = class(TForm)
     Image3: TImage;
     Image2: TImage;
-    Image1: TImage;
     edtUsuario: TEdit;
     edtSenha: TEdit;
-    Image6: TImage;
-    Image7: TImage;
-    Image8: TImage;
+    BitBtn1: TBitBtn;
     procedure Image1Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
     procedure Image7Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure mrCancelClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   Tentativas : Smallint;
@@ -34,7 +29,8 @@ type
 
 var
   Login: TLogin;
-  User : string;
+  User, Nome : string;
+
 implementation
 
 uses UModulo, UPrincipal;
@@ -96,6 +92,7 @@ begin
            Principal.UNome.Caption  := 'Usuário , ' + Modulo.sqlDSLogin.Fields[1].AsString;
            Principal.Tipo.Caption := 'Permissão : '+Modulo.sqlDSLogin.Fields[2].AsString;
            User := Modulo.sqlDSLogin.Fields[2].AsString;
+           Principal.Caption := 'ASILO RECANTO DAS FLORES - Usuário : '+Modulo.sqlDSLogin.Fields[1].AsString;
 
 end;
 
@@ -108,43 +105,5 @@ procedure TLogin.btnCancelarClick(Sender: TObject);
 begin
 Application.Terminate;
 end;
-
-procedure TLogin.FormCreate(Sender: TObject);
-var
-Arquivo: TIniFile;
-Begin
- Try
-     Arquivo:= TIniFile.Create(ExtractFilePath(Application.ExeName)+'CONF_LOGIN.ini');
-     with Modulo.Conexao do
-     begin
-       Params.Values['DATABASE'] := Arquivo.ReadString('DADOS','DATABASE','');
-       Params.Values['USERNAME'] := Arquivo.ReadString('DADOS','USERNAME','');
-       Params.Values['PASSWORD'] := Arquivo.ReadString('DADOS','PASSWORD','');
-       Arquivo.Free
-     end;
-  Except
-    ShowMessage('Não foi possivel conectar! Nenhum servidor disponível...');
-  End;
-end;
-
-procedure TLogin.FormShow(Sender: TObject);
-var
-Arquivo: TIniFile;
-Begin
- Try
-     Arquivo:= TIniFile.Create(ExtractFilePath(Application.ExeName)+'CONF_BANCO.ini');
-     with Modulo.Conexao do
-     begin
-       Params.Values['CONNECTIONNAME'] := Arquivo.ReadString('DADOS','CONNECTIONNAME','');
-       Params.Values['DATABASE'] := Arquivo.ReadString('DADOS','DATABASE','');
-       Params.Values['USERNAME'] := Arquivo.ReadString('DADOS','USERNAME','');
-       Params.Values['PASSWORD'] := Arquivo.ReadString('DADOS','PASSWORD','');
-       Arquivo.Free
-     end;
-
-  Except
-    ShowMessage('Não foi possivel conectar! Nenhum servidor disponível...');
-  End;
-  end;
 
 end.

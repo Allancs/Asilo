@@ -51,6 +51,9 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure btnDeletarClick(Sender: TObject);
+    procedure EsquerdaClick(Sender: TObject);
+    procedure DireitaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -186,6 +189,50 @@ Modulo.cdsLigacoes.Cancel;
 
           // Ligar o Gravar
           btnGravar.Enabled      := False;
+end;
+
+procedure TResponsavel.btnDeletarClick(Sender: TObject);
+begin
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+end
+else
+begin
+          DBEdit4.Enabled       := False;
+          DBEdit5.Enabled       := False;
+          DBEdit6.Enabled       := False;
+          Idoso.Enabled       := False;
+
+
+ If
+           MessageDlg ('Você tem certeza que deseja excluir?',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+          = mryes Then Begin
+                         Modulo.cdsLigacoes.Delete;
+                         Modulo.cdsLigacoes.ApplyUpdates(-1);
+                         ShowMessage ('Registro Excluido com sucesso!');
+                       End
+                  Else Begin
+                          ShowMessage ('Nenhum registro deletado!');
+                       End;
+                       end;
+end;
+
+procedure TResponsavel.EsquerdaClick(Sender: TObject);
+begin
+Modulo.cdsLigacoes.Prior;
+end;
+
+procedure TResponsavel.DireitaClick(Sender: TObject);
+begin
+Modulo.cdsLigacoes.Next;
 end;
 
 end.

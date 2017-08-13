@@ -34,6 +34,7 @@ type
     URL: TEdit;
     OQue: TMemo;
     Label7: TLabel;
+    Label6: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -123,6 +124,16 @@ end;
 
 procedure TVoluntarios.btnDeletarClick(Sender: TObject);
 begin
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+end
+else
+begin
           DBEdit2.Enabled       := False;
           DBEdit3.Enabled       := False;
           DBEdit4.Enabled       := False;
@@ -141,6 +152,7 @@ begin
                   Else Begin
                           ShowMessage ('Nenhum registro deletado!');
                        End;
+                       end;
 end;
 
 procedure TVoluntarios.btnCancelarClick(Sender: TObject);

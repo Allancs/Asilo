@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Buttons, StdCtrls, DBCtrls, DB, Mask, FMTBcd, SqlExpr;
+  Dialogs, Buttons, StdCtrls, DBCtrls, DB, Mask, FMTBcd, SqlExpr,
+  jpeg, ExtCtrls;
 
 type
   TDespesas = class(TForm)
@@ -27,6 +28,7 @@ type
     btnDeletar: TBitBtn;
     btnCancelar: TBitBtn;
     btnGravar: TBitBtn;
+    Image1: TImage;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);

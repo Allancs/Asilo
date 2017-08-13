@@ -38,6 +38,8 @@ type
     URL: TEdit;
     Label6: TLabel;
     Label7: TLabel;
+    OBS: TButton;
+    OQue3: TMemo;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -48,6 +50,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure OqueeClick(Sender: TObject);
     procedure EmailsClick(Sender: TObject);
+    procedure OBSClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -164,11 +167,25 @@ end;
 
 procedure TSMTPs.btnGravarClick(Sender: TObject);
 begin
+IF (DBEdit4.Text = '')
+then begin
+ MessageDlg('Campo usuário não pode ser vasio'
+                    , mtWarning, [mbOK], 0);
+end
+else if (DBEdit5.Text = '')
+then begin
+MessageDlg('Campo senha não pode ser vasio'
+                    , mtWarning, [mbOK], 0);
+
+end
+else
+begin
 Modulo.cdsEmail.Post;
 
          Modulo.cdsEmail.ApplyUpdates(-1);
-
+         SMTPs.Caption := 'Servidor Smtp cadastrado com Sucesso!';
          btnCancelar.Click;
+         end;
 end;
 
 procedure TSMTPs.EsquerdaClick(Sender: TObject);
@@ -183,19 +200,14 @@ end;
 
 procedure TSMTPs.FormCreate(Sender: TObject);
 begin
-if DBEdit1.Text = ''
-Then Begin
-      btnEditar.Enabled := False;
-      End
-      Else Begin
-      btnEditar.Enabled := True;;
-      End;
+SMTPs.Caption := 'Cadastro de servidor Smtp';
 end;
 
 procedure TSMTPs.OqueeClick(Sender: TObject);
 begin
 Oque.Visible := True;
 Oque2.Visible := False;
+Oque3.Visible := False;
 Url.Text := 'https://pt.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol';
 Url.Visible := True;
 end;
@@ -204,8 +216,18 @@ procedure TSMTPs.EmailsClick(Sender: TObject);
 begin
 Oque.Visible := False;
 Oque2.Visible := True;
+Oque3.Visible := False;
 Url.Text := 'https://support.google.com/a/answer/176600?hl=pt-BR';
 Url.Visible := True;
+end;
+
+procedure TSMTPs.OBSClick(Sender: TObject);
+begin
+Oque.Visible := False;
+Oque2.Visible := False;
+Oque3.Visible := True;
+URL.Text := 'https://myaccount.google.com/lesssecureapps?rfn=27&rfnc=1&eid=2950840310119996301&et=0&asae=2&pli=1';
+URL.Visible := true;
 end;
 
 end.

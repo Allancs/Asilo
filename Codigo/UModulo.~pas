@@ -73,7 +73,6 @@ type
     cdsSaudeCOD_IDOSO: TIntegerField;
     cdsSaudeNOMEM: TStringField;
     cdsSaudeNOMEI: TStringField;
-    cdsSaudeATESTADO: TStringField;
     cdsSaudeRECEITA: TStringField;
     cdsSaudeOBS: TStringField;
     cdsSaudeDATA: TDateField;

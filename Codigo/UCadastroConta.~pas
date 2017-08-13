@@ -87,9 +87,6 @@ begin
            Else NReg := sqlAux.FieldByName('ULTIMO').Value + 1;
 
            Modulo.cdsUser.Insert;
-           //Modulo.sdsUser.Insert;
-          // Modulo.sqlDSLogin.Insert;
-          // Modulo.sqlDSLoginID.Value := NReg;
            Modulo.cdsUserID.Value := NReg;
 
            DBEdit2.SetFocus;

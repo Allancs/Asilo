@@ -1,6 +1,6 @@
 object Avaliacao: TAvaliacao
-  Left = 299
-  Top = 136
+  Left = 319
+  Top = 142
   Width = 325
   Height = 499
   BorderIcons = [biSystemMenu]

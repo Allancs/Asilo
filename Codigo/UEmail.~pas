@@ -61,6 +61,7 @@ type
     BitBtn1: TBitBtn;
     BitBtn6: TBitBtn;
     BitBtn5: TBitBtn;
+    Tempo: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure DBCellClick(Column: TColumn);
@@ -77,6 +78,7 @@ type
     procedure BitBtn6Click(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -185,6 +187,7 @@ end;
 procedure TEmails.BitBtn2Click(Sender: TObject);
 
 var
+   grava : string;
   // objetos necessários para o funcionamento
   IdSSLIOHandlerSocket: TIdSSLIOHandlerSocket;
   IdSMTP: TIdSMTP;
@@ -192,6 +195,7 @@ var
   //CaminhoAnexo: string;
 //  i : Integer;
 begin
+
   // instanciação dos objetos
   IdSSLIOHandlerSocket := TIdSSLIOHandlerSocket.Create(Self);
   IdSMTP := TIdSMTP.Create(Self);
@@ -246,17 +250,22 @@ begin
   // Envio da mensagem
     try
       IdSMTP.Send(IdMessage);
-      MessageDlg('Mensagem enviada com sucesso.', mtInformation, [mbOK], 0);
+      grava := Emails.Caption;
+      Emails.Caption := grava + ',  enviado com Sucesso !';
+      MessageDlg('Mensagem enviada com Sucesso.', mtInformation, [mbOK], 0);
     except
       On E:Exception do
+
         MessageDlg('Erro ao enviar a mensagem: ' +
                     E.Message, mtWarning, [mbOK], 0);
+
     end;
   finally
     // liberação dos objetos da memória
     FreeAndNil(IdMessage);
     FreeAndNil(IdSSLIOHandlerSocket);
     FreeAndNil(IdSMTP);
+    
   end;
 end;
 
@@ -314,9 +323,16 @@ If (edtPesquisa.Text = '')
 then
 begin
    EmailReal.Caption := 'Email : ';
+end
+else
+begin
+EmailReal.Caption := 'Email : '+getEmail.Text;
+end;
 end;
 
-EmailReal.Caption := 'Email : '+getEmail.Text;
+procedure TEmails.FormActivate(Sender: TObject);
+begin
+Emails.Caption := 'Envio de Email'
 end;
 
 end.

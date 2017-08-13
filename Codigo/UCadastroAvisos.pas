@@ -9,21 +9,23 @@ uses
 
 type
   TCadastroAvisos = class(TForm)
-    Label1: TLabel;
+    sqlAux: TSQLQuery;
+    Image1: TImage;
+    Baixo: TPanel;
+    Direita: TBitBtn;
+    Esquerda: TBitBtn;
+    btnInserir: TBitBtn;
+    btnGravar: TBitBtn;
+    btnCancelar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnDeletar: TBitBtn;
+    LadoEsquerdo: TPanel;
     DBEdit1: TDBEdit;
-    Label2: TLabel;
-    Label3: TLabel;
     DBEdit3: TDBEdit;
     DBMemo1: TDBMemo;
-    Direita: TSpeedButton;
-    Esquerda: TSpeedButton;
-    sqlAux: TSQLQuery;
-    btnEditar: TBitBtn;
-    btnInserir: TBitBtn;
-    btnDeletar: TBitBtn;
-    btnCancelar: TBitBtn;
-    btnGravar: TBitBtn;
-    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -104,6 +106,16 @@ end;
 
 procedure TCadastroAvisos.btnDeletarClick(Sender: TObject);
 begin
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+end
+else
+begin
           DBEdit3.Enabled       := False;
           DBMemo1.Enabled       := False;
 
@@ -121,6 +133,7 @@ begin
                   Else Begin
                           ShowMessage ('Nenhum registro deletado!');
                        End;
+                       end;
 
 end;
 

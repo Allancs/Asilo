@@ -35,6 +35,7 @@ type
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btnDeletarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -161,6 +162,25 @@ Then Begin
       Else Begin
       btnEditar.Enabled := True;;
       End;
+end;
+
+procedure TContas.btnDeletarClick(Sender: TObject);
+begin
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+end
+else
+begin
+
+
+
+
+end;
 end;
 
 end.
